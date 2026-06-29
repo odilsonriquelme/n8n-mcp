@@ -1,0 +1,54 @@
+REPOSITÓRIO: n8n-mcp
+TIPO: Fork Público (espelho do upstream, branch main)
+LINGUAGEM: TypeScript (Node)
+URL (seu fork):    https://github.com/odilsonriquelme/n8n-mcp
+UPSTREAM (fork de): https://github.com/czlonkowski/n8n-mcp
+LICENÇA: MIT  | PACOTE NPM: n8n-mcp
+
+⚠️ REPO GRANDE (~746 MB clonado) — contém base de dados de nós e templates do n8n.
+
+DESCRIÇÃO
+---------
+Servidor MCP (Model Context Protocol) que dá a assistentes de IA (Claude Desktop, Claude
+Code, Windsurf, Cursor) acesso COMPLETO à documentação, propriedades e operações dos nós do
+n8n — a plataforma de automação de workflows. Com isso, a IA consegue ENTENDER e CONSTRUIR
+workflows do n8n por você.
+
+O QUE OFERECE (do README)
+-------------------------
+- 2.063 nós do n8n (816 core + 1.247 da comunidade, 1.113 verificados)
+- Propriedades dos nós (99% de cobertura, com schemas detalhados)
+- Operações dos nós (63,6% de cobertura)
+- Documentação oficial (87% de cobertura, inclui nós de IA)
+- 265 variantes de tools com IA detectadas
+- 156 exemplos reais extraídos de templates populares
+- Biblioteca de 2.352 templates de workflow (99,96% com metadados de IA)
+- Busca de nós da comunidade com filtro por "source"
+
+COMO USAR (resumo)
+------------------
+Instala-se como servidor MCP no cliente de IA (Claude Desktop/Code, Cursor, Windsurf).
+Deploy rápido via npm (n8n-mcp), Docker (ghcr.io/czlonkowski/n8n-mcp) ou Railway (botão).
+Opcionalmente conecta a uma instância n8n real (.env) para ler/gerenciar workflows.
+
+ESTRUTURA / ARQUIVOS NOTÁVEIS
+-----------------------------
+src/            → código do servidor MCP (parsing dos nós, ferramentas MCP, busca)
+Dockerfile* (Dockerfile, .railway, .test) → containerização e deploy
+.env.example / .env.n8n.example / .env.docker → modelos de configuração (sem segredos reais)
+.github/        → CI (5418 testes passando segundo o README)
+.secretlintrc.json + .secretlintignore → lint anti-segredos (boa prática do projeto)
+CLAUDE.md       → instruções para o agente operar no projeto
+ATTRIBUTION.md, CHANGELOG.md, ANALYSIS_QUICK_REFERENCE.md → metadados e referência
+README.md       → documentação extensa. De terceiros — não editar.
+
+UTILIDADE PARA VOCÊ
+-------------------
+Muito útil se você usa/pretende usar n8n para automações (ex.: pipelines de conteúdo,
+alertas, integrações entre suas ferramentas). Permite pedir ao Claude para montar workflows
+n8n com conhecimento real dos nós.
+
+OBSERVAÇÃO (fork)
+-----------------
+Fork espelho do upstream czlonkowski/n8n-mcp (MIT). README/código são de terceiros — não
+editar. Push deste repo vai só para o SEU fork. Para atualizar: "Sync fork" na web.
